@@ -13,5 +13,6 @@ public class Main {
             int result = service.calculateBonus(2000);
             System.out.println(10 == result);
         }
+
     }
 }
