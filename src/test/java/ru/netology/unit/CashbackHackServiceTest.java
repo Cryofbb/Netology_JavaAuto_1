@@ -8,23 +8,27 @@ public class CashbackHackServiceTest {
     CashbackHackService service = new CashbackHackService();
 
     @Test
-    public void more1000(){
-        assertEquals(service.remain(2000), 1000);
+    public void amountMore1000() {
+        assertEquals(service.remain(2000), 0);
     }
+
     @Test
-    public void less1000(){
+    public void amountLess1000() {
         assertEquals(service.remain(100), 900);
     }
+
     @Test
-    public void equals1000(){
-        assertEquals(service.remain(1000), 1000);
+    public void amountEquals1000() {
+        assertEquals(service.remain(1000), 0);
     }
+
     @Test
-    public void negative(){
-        assertEquals(service.remain(-100), 1100);
+    public void negativeAmount() {
+        assertEquals(service.remain(-100), 1000);
     }
+
     @Test
-    public void zero(){
+    public void zeroAmount() {
         assertEquals(service.remain(0), 1000);
     }
 }
